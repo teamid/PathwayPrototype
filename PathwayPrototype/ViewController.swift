@@ -63,8 +63,9 @@ extension ViewController {
             }
       }
       
-      
 }
+
+
 
 extension ViewController: UITableViewDataSource {
       
@@ -93,7 +94,7 @@ extension ViewController: UITableViewDelegate {
       }
       
       func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-            return 1
+            return 2
       }
       
       

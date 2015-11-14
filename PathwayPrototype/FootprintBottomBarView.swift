@@ -67,6 +67,8 @@ class FootprintBottomBarView: UIView {
             view.frame = bounds
             view.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
             addSubview(view)
+            
+            arrow?.colorOverlay = UIColor.blackColor()
       }
       
       
@@ -93,7 +95,7 @@ class FootprintBottomBarView: UIView {
             let options: UIViewAnimationOptions = [.CurveEaseInOut, .BeginFromCurrentState, .AllowUserInteraction]
             
             if visible {
-                  UIView.animateWithDuration(0.25, delay: 0.15, options: options, animations: arrowBlock, completion: nil)
+                  UIView.animateWithDuration(0.25, delay: 0.1, options: options, animations: arrowBlock, completion: nil)
                   UIView.animateWithDuration(0.55, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 1.0, options: options, animations: block, completion: nil)
             } else {
                   UIView.animateWithDuration(0.15, delay: 0, options: options, animations: arrowBlock) { finished in
@@ -107,6 +109,19 @@ class FootprintBottomBarView: UIView {
             let gutter: CGFloat = 15
             let val = CGRectGetMinX(venueView.frame)
             return gutter - val
+      }
+      
+      override func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
+            let view = super.hitTest(point, withEvent: event)
+            if view != nil && venueVisible {
+                  let arrowRect = arrow.frame
+                  print("Point: \(point), rect: \(arrowRect)")
+
+                  if point.x > CGRectGetMinX(arrowRect)-22 {
+                        displayVenueView(visible: false)
+                  }
+            }
+            return view
       }
 
 }

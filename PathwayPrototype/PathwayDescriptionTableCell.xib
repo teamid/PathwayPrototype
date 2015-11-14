@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XkO-Jr-HLr">
-                        <rect key="frame" x="30" y="30" width="455" height="249"/>
+                        <rect key="frame" x="32" y="0.0" width="451" height="279"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <attributedString key="attributedText">
@@ -32,10 +32,10 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="XkO-Jr-HLr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="2fF-uX-GXc"/>
-                    <constraint firstAttribute="trailing" secondItem="XkO-Jr-HLr" secondAttribute="trailing" constant="30" id="7kL-5h-hjP"/>
+                    <constraint firstItem="XkO-Jr-HLr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2fF-uX-GXc"/>
+                    <constraint firstAttribute="trailing" secondItem="XkO-Jr-HLr" secondAttribute="trailing" constant="32" id="7kL-5h-hjP"/>
                     <constraint firstAttribute="bottom" secondItem="XkO-Jr-HLr" secondAttribute="bottom" constant="30" id="QbH-ZQ-otk"/>
-                    <constraint firstItem="XkO-Jr-HLr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="aow-Gl-iBA"/>
+                    <constraint firstItem="XkO-Jr-HLr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="aow-Gl-iBA"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>

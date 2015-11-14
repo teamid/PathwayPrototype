@@ -67,6 +67,7 @@ class PathwayTopBarView: UIView {
             view.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
             addSubview(view)
             addBottomBar()
+            addTapGestures()
       }
       
       private func addBottomBar() {
@@ -75,6 +76,12 @@ class PathwayTopBarView: UIView {
             let div = UIView(frame: rect)
             div.backgroundColor = UIColor.Gray(65)
             backgroundView.addSubview(div)
+      }
+      
+      private func addTapGestures() {
+            let tap = UITapGestureRecognizer(target: self, action: "didTapBar:")
+            backgroundView.addGestureRecognizer(tap)
+            backgroundView.userInteractionEnabled = true
       }
       
       
@@ -92,6 +99,9 @@ class PathwayTopBarView: UIView {
       }
 
       
+      func didTapBar(sender: AnyObject!) {
+            delegate?.topBar(self, topBarWasTapped: sender)
+      }
       
       
       func handleScrollViewOffset(offset offset: CGFloat) {

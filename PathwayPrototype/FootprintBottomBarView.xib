@@ -36,7 +36,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="1211" height="56"/>
                     <animations/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ArrowIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DqB-yJ-7gt" userLabel="arrow">
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="DqB-yJ-7gt" userLabel="arrow">
                     <rect key="frame" x="588" y="11" width="34" height="34"/>
                     <animations/>
                     <constraints>
@@ -73,7 +73,7 @@
                             <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="15"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rGT-Mi-xBS" userLabel="VenueView">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hotel" translatesAutoresizingMaskIntoConstraints="NO" id="rGT-Mi-xBS" userLabel="VenueView">
                             <rect key="frame" x="1162" y="11" width="34" height="34"/>
                             <animations/>
                             <color key="backgroundColor" red="0.74901960784313726" green="0.55294117647058827" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,8 +144,9 @@
         </view>
     </objects>
     <resources>
-        <image name="ArrowIcon" width="10" height="17"/>
+        <image name="Close" width="16" height="16"/>
         <image name="DavidAvatar" width="40" height="40"/>
         <image name="FootprintBottomBar" width="375" height="54"/>
+        <image name="Hotel" width="81" height="81"/>
     </resources>
 </document>

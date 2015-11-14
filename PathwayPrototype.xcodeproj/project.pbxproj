@@ -15,6 +15,8 @@
 		630831691BF6BB2B00303C55 /* PathwayFootprintCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630831671BF6BB2B00303C55 /* PathwayFootprintCell.xib */; };
 		6308316B1BF6BBFD00303C55 /* FootprintBottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308316A1BF6BBFD00303C55 /* FootprintBottomBarView.swift */; };
 		6308316D1BF6BC0F00303C55 /* FootprintBottomBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6308316C1BF6BC0F00303C55 /* FootprintBottomBarView.xib */; };
+		633A5FE51BF6F0E700E3706B /* PathwayCreatorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A5FE31BF6F0E700E3706B /* PathwayCreatorsCell.swift */; };
+		633A5FE61BF6F0E700E3706B /* PathwayCreatorsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633A5FE41BF6F0E700E3706B /* PathwayCreatorsCell.xib */; };
 		637A6F191BF53A3800D60EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F181BF53A3800D60EB2 /* AppDelegate.swift */; };
 		637A6F1B1BF53A3800D60EB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F1A1BF53A3800D60EB2 /* ViewController.swift */; };
 		637A6F1E1BF53A3800D60EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F1C1BF53A3800D60EB2 /* Main.storyboard */; };
@@ -70,6 +72,8 @@
 		630831671BF6BB2B00303C55 /* PathwayFootprintCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PathwayFootprintCell.xib; sourceTree = "<group>"; };
 		6308316A1BF6BBFD00303C55 /* FootprintBottomBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootprintBottomBarView.swift; sourceTree = "<group>"; };
 		6308316C1BF6BC0F00303C55 /* FootprintBottomBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FootprintBottomBarView.xib; sourceTree = "<group>"; };
+		633A5FE31BF6F0E700E3706B /* PathwayCreatorsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PathwayCreatorsCell.swift; path = ../PathwayCreatorsCell.swift; sourceTree = "<group>"; };
+		633A5FE41BF6F0E700E3706B /* PathwayCreatorsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PathwayCreatorsCell.xib; path = ../PathwayCreatorsCell.xib; sourceTree = "<group>"; };
 		637A6F151BF53A3800D60EB2 /* PathwayPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathwayPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		637A6F181BF53A3800D60EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		637A6F1A1BF53A3800D60EB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 				630831671BF6BB2B00303C55 /* PathwayFootprintCell.xib */,
 				6308316A1BF6BBFD00303C55 /* FootprintBottomBarView.swift */,
 				6308316C1BF6BC0F00303C55 /* FootprintBottomBarView.xib */,
+				633A5FE31BF6F0E700E3706B /* PathwayCreatorsCell.swift */,
+				633A5FE41BF6F0E700E3706B /* PathwayCreatorsCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -408,6 +414,7 @@
 				637A6F771BF5763E00D60EB2 /* MapTriangleCell.xib in Resources */,
 				637A6F681BF55BBF00D60EB2 /* PathwayMapTableCell.xib in Resources */,
 				637A6F231BF53A3800D60EB2 /* LaunchScreen.storyboard in Resources */,
+				633A5FE61BF6F0E700E3706B /* PathwayCreatorsCell.xib in Resources */,
 				637A6F6C1BF55BFF00D60EB2 /* PathwayDescriptionTableCell.xib in Resources */,
 				637A6F201BF53A3800D60EB2 /* Assets.xcassets in Resources */,
 				6308316D1BF6BC0F00303C55 /* FootprintBottomBarView.xib in Resources */,
@@ -449,6 +456,7 @@
 				630831681BF6BB2B00303C55 /* PathwayFootprintCell.swift in Sources */,
 				637A6F511BF553F800D60EB2 /* PathwayTopBarView.swift in Sources */,
 				630831571BF67C8E00303C55 /* SnapshotHelper.swift in Sources */,
+				633A5FE51BF6F0E700E3706B /* PathwayCreatorsCell.swift in Sources */,
 				637A6F631BF55B9F00D60EB2 /* PathwayCountTableCell.swift in Sources */,
 				637A6F191BF53A3800D60EB2 /* AppDelegate.swift in Sources */,
 				6308316B1BF6BBFD00303C55 /* FootprintBottomBarView.swift in Sources */,

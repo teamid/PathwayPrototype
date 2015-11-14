@@ -12,28 +12,20 @@ class PathwayDescriptionTableCell: UITableViewCell {
       
       
       struct Static {
-            static let leftInset: CGFloat = 30
+            static let leftInset: CGFloat = 36
             static let rightInset: CGFloat = leftInset
+            
+            static let topInset: CGFloat = 25
+            static let bottomInset: CGFloat = 40
             
             static let font: UIFont = UIFont(name: "SFUIText-Regular", size: 15)!
             
             static func heightWithConstrainedWidth(string: String) -> CGFloat {
-                  return 188
-//                  print("Getting height for string: \(string)")
-//                  print(font)
-//                  
-//                  let width = UIScreen.width - leftInset - rightInset
-//                  print(width)
-//
-//                  let constraintRect = CGSize(width: width, height: UIScreen.height)
-//                  print(constraintRect)
-//
-//                  
-//                  let boundingBox = string.boundingRectWithSize(constraintRect, options: [.UsesLineFragmentOrigin, .UsesFontLeading], attributes: [NSFontAttributeName: font], context: nil)
-//                  print(boundingBox)
-//                  return boundingBox.height
+                  let width = UIScreen.width - leftInset - rightInset
+                  let constraintRect = CGSize(width: width, height: UIScreen.height)
+                  let boundingBox = string.boundingRectWithSize(constraintRect, options: [.UsesLineFragmentOrigin, .UsesFontLeading], attributes: [NSFontAttributeName: font], context: nil)
+                  return boundingBox.height + topInset + bottomInset
             }
-
       }
 
       @IBOutlet weak var textView: UITextView!

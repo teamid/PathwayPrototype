@@ -32,6 +32,8 @@ class PathwayVC: UIViewController {
             static let screenHeight: CGFloat = UIScreen.height - 44
             static let parallaxConstant: CGFloat = 0.65
             
+            static let bottomInset: CGFloat = UIScreen.width
+            
             struct CountInfo {
                   typealias Info = PathwayCountTableCell.CountInfo
                   static let cities: Info = (3,"CITIES")
@@ -78,6 +80,9 @@ class PathwayVC: UIViewController {
       
       
       @IBOutlet weak var bottomContainer: UIView!
+      @IBOutlet weak var bottomImageView: UIImageView!
+      
+      
       @IBOutlet weak var titleLabel: UILabel!
       @IBOutlet weak var subtitleLabel: UILabel!
       
@@ -107,7 +112,7 @@ class PathwayVC: UIViewController {
             super.viewDidLoad()
             setupTopBar()
             setupTableView()
-            
+            setBackgroundImage()
             // Do any additional setup after loading the view.
       }
       
@@ -115,6 +120,12 @@ class PathwayVC: UIViewController {
             super.viewWillAppear(animated)
             setupAvatar()
             generateMapImages()
+      }
+      
+      
+      override func viewDidAppear(animated: Bool) {
+            super.viewDidAppear(animated)
+
       }
       
       override func didReceiveMemoryWarning() {
@@ -128,6 +139,15 @@ class PathwayVC: UIViewController {
                   SnapshotHelper.createMapImage(atCoordinate: coord, targetSize: size) { [weak self] image in
                         self?.mapImages[i] = image
                         return
+                  }
+            }
+      }
+      
+      private func setBackgroundImage() {
+            callOnBackgroundQueue {
+                  let image = Constants.Images.whistler
+                  callOnMainQueue { [weak self] in
+                        self?.bottomImageView?.image = image
                   }
             }
       }
@@ -154,6 +174,8 @@ extension PathwayVC {
                   let nib = UINib(nibName: identifier, bundle: nil)
                   tableView.registerNib(nib, forCellReuseIdentifier: identifier)
             }
+            tableView.contentInset.bottom = -Static.bottomInset
+
       }
       
       private func setupAvatar() {
@@ -178,6 +200,7 @@ extension PathwayVC: PathwayTopBarDelegate {
             dismissViewControllerAnimated(true, completion: nil)
       }
       func topBar(bar: PathwayTopBarView, topBarWasTapped sender: AnyObject!) {
+            tableView.setContentOffset(CGPointZero, animated: true)
             
       }
       func topBar(bar: PathwayTopBarView, rightIconWasTapped sender: AnyObject!) {
@@ -195,8 +218,9 @@ extension PathwayVC {
             case Description = 2
             case Footprints = 3
             case LikeComment = 4
+            case Creators = 5
             
-            static let AllValues: [Chunk] = [.Counts,.Map,.Description,.Footprints,.LikeComment]
+            static let AllValues: [Chunk] = [.Counts,.Map,.Description,.Footprints,.LikeComment, .Creators]
             
             static func nib(chunk: Chunk) -> String {
                   switch chunk {
@@ -210,6 +234,8 @@ extension PathwayVC {
                         return Reuse.footprint
                   case .LikeComment:
                         return Reuse.count
+                  case .Creators:
+                        return Reuse.creators
                   }
             }
             static func nib(chunk: Chunk, row: Int) -> String {
@@ -228,6 +254,7 @@ extension PathwayVC {
                   static let map: String = "PathwayMapTableCell"
                   static let description: String = "PathwayDescriptionTableCell"
                   static let footprint: String = "PathwayFootprintCell"
+                  static let creators: String = "PathwayCreatorsCell"
             }
       
       }
@@ -260,7 +287,10 @@ extension PathwayVC: UITableViewDataSource {
             let chunk = Chunk.AllValues[section]
             switch chunk {
             case .Description:
-                  return createDescriptionFooter()
+                  return createDescriptionFooter(0)
+            case .LikeComment:
+                  
+                  return createDescriptionFooter(44)
             default:
                   return UIView()
             }
@@ -270,12 +300,12 @@ extension PathwayVC: UITableViewDataSource {
             return Chunk.AllValues.count
       }
       
-      private func createDescriptionFooter() -> UIView {
+      private func createDescriptionFooter(divOffset: CGFloat) -> UIView {
             let rect = CGRect(x: 0, y: 0, width: UIScreen.width, height: 44)
             let view = UIView(frame: rect)
             view.backgroundColor = UIColor.whiteColor()
 
-            let divRect = CGRect(x: 0, y: 0, width: 54, height: 2)
+            let divRect = CGRect(x: 0, y: divOffset, width: 54, height: 2)
             let divView = UIView(frame: divRect)
             divView.backgroundColor = UIColor.Gray(85)
 
@@ -294,10 +324,15 @@ extension PathwayVC: UITableViewDataSource {
 extension PathwayVC: UITableViewDelegate {
       
       func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            if section == 0 {
+            let chunk = Chunk.AllValues[section]
+            switch chunk {
+            case .Counts:
                   return UIScreen.height
+            case .Description:
+                  return 25
+            default:
+                  return CGFloat.min
             }
-            return CGFloat.min
       }
       
       func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -305,6 +340,10 @@ extension PathwayVC: UITableViewDelegate {
             switch chunk {
             case .Description:
                   return 44
+            case .LikeComment:
+                  return 44
+            case .Creators:
+                  return Static.bottomInset
             default:
                   return CGFloat.min
             }
@@ -318,45 +357,33 @@ extension PathwayVC: UITableViewDelegate {
             case .Map:
                   return 188
             case .Description:
-                  return UITableViewAutomaticDimension
+                  let string = Static.pathwayString
+                  let height = PathwayDescriptionTableCell.Static.heightWithConstrainedWidth(string)
+                  return height
             case .Footprints:
                   if indexPath.row % 2 == 0 {
                         let i = Int(indexPath.row/2)
                         let image = Static.footprints[i].image
                         let height = UIScreen.width * (image.size.height / image.size.width)
                         return height
-                  }
-                  return UITableViewAutomaticDimension
-            }
-      }
-      
-      func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-            let chunk = Chunk.AllValues[indexPath.section]
-            switch chunk {
-            case .Description:
-                  let string = Static.pathwayString
-                  let height = PathwayDescriptionTableCell.Static.heightWithConstrainedWidth(string)
-                  return height
-            case.Footprints:
-                  if indexPath.row % 2 != 0 {
-                        let i = Int(indexPath.row/2)
+                  } else {
+                        let i = Int((indexPath.row-1)/2)
                         if let caption = Static.footprints[i].caption {
-                              return PathwayDescriptionTableCell.Static.heightWithConstrainedWidth(caption)
+                              return PathwayDescriptionTableCell.Static.heightWithConstrainedWidth(caption) + 20
                         }
-                        return 60
                   }
-            default:
-                  break
+                  return 88
+            case .Creators:
+                  return 188
             }
-            return self.tableView(tableView, heightForRowAtIndexPath: indexPath)
-
       }
+
       
       func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
             if let cell = cell as? PathwayCountTableCell {
                   let chunk = Chunk.AllValues[indexPath.section]
                   let counts = chunk == .Counts ? Static.CountInfo.pathwayValues : Static.CountInfo.likeValues
-                  let inset = chunk == .Counts ? UIEdgeInsetsZero : UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+                  let inset = chunk == .Counts ? UIEdgeInsetsZero : UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 15)
                   cell.setCounts(counts, inset: inset)
             } else if let cell = cell as? PathwayMapTableCell where mapController == nil {
                   mapController = TriangleCollectionController()
@@ -368,13 +395,12 @@ extension PathwayVC: UITableViewDelegate {
                   cell.footprintImageView.image = footprint.image
                   cell.barView.titleLabel.text = footprint.owner
             } else if let cell = cell as? PathwayDescriptionTableCell {
-                  print("DescriptionCell: \(cell.frame)")
+
                   let chunk = Chunk.AllValues[indexPath.section]
                   if chunk == .Footprints {
-                        let i = Int(indexPath.row/2)
+                        let i = indexPath.row % 2 == 0 ? Int(indexPath.row/2) : Int((indexPath.row-1)/2)
                         let footprint = Static.footprints[i]
                         cell.textView.text = footprint.caption
-                        cell.setNeedsLayout()
                   } else {
                         cell.textView.text = Static.pathwayString
                   }
@@ -393,6 +419,12 @@ extension PathwayVC: UITableViewDelegate {
       }
       
       
+      func tableView(tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+            view.backgroundColor = UIColor.whiteColor()
+      }
+      
+      
+      
       
 }
 
@@ -403,7 +435,13 @@ extension PathwayVC: UIScrollViewDelegate {
       func scrollViewDidScroll(scrollView: UIScrollView) {
             let yOffset = scrollView.contentOffset.y
             topBar.handleScrollViewOffset(offset: yOffset)
-            bottomContainer.frame.origin.y = -yOffset * Static.parallaxConstant
+            
+            let containerOffset = -yOffset * Static.parallaxConstant
+            bottomContainer.frame.origin.y = containerOffset
+            
+            let imageViewOffset = containerOffset * (1-Static.parallaxConstant)
+            bottomImageView.frame.origin.y = imageViewOffset < 0 ? imageViewOffset : 0
+            
             if yOffset >= 0 {
                   bottomContainer.alpha = 1 - (yOffset / Static.screenHeight)
             }
@@ -418,6 +456,7 @@ extension PathwayVC: UIScrollViewDelegate {
             let bars = tableView.visibleCells.flatMap { $0 as? PathwayFootprintCell }.flatMap { $0.barView }.filter { $0.venueVisible == true }
             bars.forEach { $0.displayVenueView(visible: false) }
       }
+      
 }
 
 extension PathwayVC: TriangleCollectionDelegate {

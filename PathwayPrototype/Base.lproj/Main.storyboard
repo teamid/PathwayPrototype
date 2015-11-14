@@ -78,7 +78,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Whistler" translatesAutoresizingMaskIntoConstraints="NO" id="PAp-zD-Kb4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PAp-zD-Kb4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
@@ -202,6 +202,7 @@
                     <connections>
                         <outlet property="avatarView" destination="cf0-qL-0Fb" id="zxo-9H-czk"/>
                         <outlet property="bottomContainer" destination="wNj-UE-Ukj" id="jXE-O1-lRa"/>
+                        <outlet property="bottomImageView" destination="PAp-zD-Kb4" id="a68-pN-wHx"/>
                         <outlet property="subtitleLabel" destination="WVz-HZ-ywF" id="Fbe-00-ZMw"/>
                         <outlet property="tableView" destination="K8S-dZ-2Ry" id="quG-QL-crF"/>
                         <outlet property="titleLabel" destination="bph-7v-Z5y" id="Bd9-oy-uE9"/>
@@ -238,6 +239,5 @@
         <image name="DavidAvatar" width="40" height="40"/>
         <image name="Gradient" width="400" height="300"/>
         <image name="Tab" width="375" height="51"/>
-        <image name="Whistler" width="375" height="500"/>
     </resources>
 </document>
