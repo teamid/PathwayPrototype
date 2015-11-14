@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630831551BF6556B00303C55 /* TriangleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630831541BF6556B00303C55 /* TriangleHelper.swift */; };
+		630831571BF67C8E00303C55 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630831561BF67C8E00303C55 /* SnapshotHelper.swift */; };
+		6308315E1BF681A000303C55 /* MapTriangleLabelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308315D1BF681A000303C55 /* MapTriangleLabelContainer.swift */; };
+		630831601BF681B100303C55 /* MapTriangleLabelContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6308315F1BF681B100303C55 /* MapTriangleLabelContainer.xib */; };
+		630831681BF6BB2B00303C55 /* PathwayFootprintCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630831661BF6BB2B00303C55 /* PathwayFootprintCell.swift */; };
+		630831691BF6BB2B00303C55 /* PathwayFootprintCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630831671BF6BB2B00303C55 /* PathwayFootprintCell.xib */; };
+		6308316B1BF6BBFD00303C55 /* FootprintBottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308316A1BF6BBFD00303C55 /* FootprintBottomBarView.swift */; };
+		6308316D1BF6BC0F00303C55 /* FootprintBottomBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6308316C1BF6BC0F00303C55 /* FootprintBottomBarView.xib */; };
 		637A6F191BF53A3800D60EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F181BF53A3800D60EB2 /* AppDelegate.swift */; };
 		637A6F1B1BF53A3800D60EB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F1A1BF53A3800D60EB2 /* ViewController.swift */; };
 		637A6F1E1BF53A3800D60EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F1C1BF53A3800D60EB2 /* Main.storyboard */; };
@@ -14,6 +22,26 @@
 		637A6F231BF53A3800D60EB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F211BF53A3800D60EB2 /* LaunchScreen.storyboard */; };
 		637A6F2E1BF53A3800D60EB2 /* PathwayPrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F2D1BF53A3800D60EB2 /* PathwayPrototypeTests.swift */; };
 		637A6F391BF53A3800D60EB2 /* PathwayPrototypeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F381BF53A3800D60EB2 /* PathwayPrototypeUITests.swift */; };
+		637A6F471BF53BD000D60EB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F461BF53BD000D60EB2 /* Constants.swift */; };
+		637A6F4A1BF53DA600D60EB2 /* PathwayFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F481BF53DA600D60EB2 /* PathwayFeedCell.swift */; };
+		637A6F4B1BF53DA600D60EB2 /* PathwayFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F491BF53DA600D60EB2 /* PathwayFeedCell.xib */; };
+		637A6F4D1BF53ED000D60EB2 /* SF-Display.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F4C1BF53ED000D60EB2 /* SF-Display.ttc */; };
+		637A6F4F1BF53EDA00D60EB2 /* SF-Text.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F4E1BF53EDA00D60EB2 /* SF-Text.ttc */; };
+		637A6F511BF553F800D60EB2 /* PathwayTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F501BF553F800D60EB2 /* PathwayTopBarView.swift */; };
+		637A6F531BF5540100D60EB2 /* PathwayTopBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F521BF5540100D60EB2 /* PathwayTopBarView.xib */; };
+		637A6F561BF5541B00D60EB2 /* PathwayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F551BF5541B00D60EB2 /* PathwayVC.swift */; };
+		637A6F581BF5579E00D60EB2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F571BF5579E00D60EB2 /* Extensions.swift */; };
+		637A6F631BF55B9F00D60EB2 /* PathwayCountTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F611BF55B9F00D60EB2 /* PathwayCountTableCell.swift */; };
+		637A6F641BF55B9F00D60EB2 /* PathwayCountTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F621BF55B9F00D60EB2 /* PathwayCountTableCell.xib */; };
+		637A6F671BF55BBF00D60EB2 /* PathwayMapTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F651BF55BBF00D60EB2 /* PathwayMapTableCell.swift */; };
+		637A6F681BF55BBF00D60EB2 /* PathwayMapTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F661BF55BBF00D60EB2 /* PathwayMapTableCell.xib */; };
+		637A6F6B1BF55BFF00D60EB2 /* PathwayDescriptionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F691BF55BFF00D60EB2 /* PathwayDescriptionTableCell.swift */; };
+		637A6F6C1BF55BFF00D60EB2 /* PathwayDescriptionTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F6A1BF55BFF00D60EB2 /* PathwayDescriptionTableCell.xib */; };
+		637A6F6E1BF55E9000D60EB2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637A6F6D1BF55E9000D60EB2 /* MapKit.framework */; };
+		637A6F721BF571A100D60EB2 /* CountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F701BF571A100D60EB2 /* CountCell.swift */; };
+		637A6F731BF571A100D60EB2 /* CountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F711BF571A100D60EB2 /* CountCell.xib */; };
+		637A6F761BF5763E00D60EB2 /* MapTriangleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A6F741BF5763E00D60EB2 /* MapTriangleCell.swift */; };
+		637A6F771BF5763E00D60EB2 /* MapTriangleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637A6F751BF5763E00D60EB2 /* MapTriangleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +62,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		630831541BF6556B00303C55 /* TriangleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleHelper.swift; sourceTree = "<group>"; };
+		630831561BF67C8E00303C55 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		6308315D1BF681A000303C55 /* MapTriangleLabelContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTriangleLabelContainer.swift; sourceTree = "<group>"; };
+		6308315F1BF681B100303C55 /* MapTriangleLabelContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapTriangleLabelContainer.xib; path = ../MapTriangleLabelContainer.xib; sourceTree = "<group>"; };
+		630831661BF6BB2B00303C55 /* PathwayFootprintCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathwayFootprintCell.swift; sourceTree = "<group>"; };
+		630831671BF6BB2B00303C55 /* PathwayFootprintCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PathwayFootprintCell.xib; sourceTree = "<group>"; };
+		6308316A1BF6BBFD00303C55 /* FootprintBottomBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootprintBottomBarView.swift; sourceTree = "<group>"; };
+		6308316C1BF6BC0F00303C55 /* FootprintBottomBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FootprintBottomBarView.xib; sourceTree = "<group>"; };
 		637A6F151BF53A3800D60EB2 /* PathwayPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathwayPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		637A6F181BF53A3800D60EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		637A6F1A1BF53A3800D60EB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +83,26 @@
 		637A6F341BF53A3800D60EB2 /* PathwayPrototypeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathwayPrototypeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		637A6F381BF53A3800D60EB2 /* PathwayPrototypeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathwayPrototypeUITests.swift; sourceTree = "<group>"; };
 		637A6F3A1BF53A3800D60EB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		637A6F461BF53BD000D60EB2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		637A6F481BF53DA600D60EB2 /* PathwayFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathwayFeedCell.swift; sourceTree = "<group>"; };
+		637A6F491BF53DA600D60EB2 /* PathwayFeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PathwayFeedCell.xib; sourceTree = "<group>"; };
+		637A6F4C1BF53ED000D60EB2 /* SF-Display.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Display.ttc"; sourceTree = "<group>"; };
+		637A6F4E1BF53EDA00D60EB2 /* SF-Text.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Text.ttc"; sourceTree = "<group>"; };
+		637A6F501BF553F800D60EB2 /* PathwayTopBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathwayTopBarView.swift; sourceTree = "<group>"; };
+		637A6F521BF5540100D60EB2 /* PathwayTopBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PathwayTopBarView.xib; sourceTree = "<group>"; };
+		637A6F551BF5541B00D60EB2 /* PathwayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathwayVC.swift; sourceTree = "<group>"; };
+		637A6F571BF5579E00D60EB2 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		637A6F611BF55B9F00D60EB2 /* PathwayCountTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathwayCountTableCell.swift; sourceTree = "<group>"; };
+		637A6F621BF55B9F00D60EB2 /* PathwayCountTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PathwayCountTableCell.xib; sourceTree = "<group>"; };
+		637A6F651BF55BBF00D60EB2 /* PathwayMapTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathwayMapTableCell.swift; sourceTree = "<group>"; };
+		637A6F661BF55BBF00D60EB2 /* PathwayMapTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PathwayMapTableCell.xib; sourceTree = "<group>"; };
+		637A6F691BF55BFF00D60EB2 /* PathwayDescriptionTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathwayDescriptionTableCell.swift; sourceTree = "<group>"; };
+		637A6F6A1BF55BFF00D60EB2 /* PathwayDescriptionTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PathwayDescriptionTableCell.xib; sourceTree = "<group>"; };
+		637A6F6D1BF55E9000D60EB2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		637A6F701BF571A100D60EB2 /* CountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountCell.swift; sourceTree = "<group>"; };
+		637A6F711BF571A100D60EB2 /* CountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountCell.xib; sourceTree = "<group>"; };
+		637A6F741BF5763E00D60EB2 /* MapTriangleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTriangleCell.swift; sourceTree = "<group>"; };
+		637A6F751BF5763E00D60EB2 /* MapTriangleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapTriangleCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				637A6F6E1BF55E9000D60EB2 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +131,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630831611BF6BADC00303C55 /* PathwayMap */ = {
+			isa = PBXGroup;
+			children = (
+				630831621BF6BAF100303C55 /* Helpers */,
+				630831631BF6BAF700303C55 /* TableCell */,
+				630831641BF6BB0000303C55 /* CollectionCell */,
+			);
+			name = PathwayMap;
+			sourceTree = "<group>";
+		};
+		630831621BF6BAF100303C55 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				630831541BF6556B00303C55 /* TriangleHelper.swift */,
+				630831561BF67C8E00303C55 /* SnapshotHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		630831631BF6BAF700303C55 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				637A6F651BF55BBF00D60EB2 /* PathwayMapTableCell.swift */,
+				637A6F661BF55BBF00D60EB2 /* PathwayMapTableCell.xib */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
+		630831641BF6BB0000303C55 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				630831651BF6BB0900303C55 /* LabelView */,
+				637A6F741BF5763E00D60EB2 /* MapTriangleCell.swift */,
+				637A6F751BF5763E00D60EB2 /* MapTriangleCell.xib */,
+			);
+			name = CollectionCell;
+			sourceTree = "<group>";
+		};
+		630831651BF6BB0900303C55 /* LabelView */ = {
+			isa = PBXGroup;
+			children = (
+				6308315D1BF681A000303C55 /* MapTriangleLabelContainer.swift */,
+				6308315F1BF681B100303C55 /* MapTriangleLabelContainer.xib */,
+			);
+			name = LabelView;
+			sourceTree = "<group>";
+		};
 		637A6F0C1BF53A3800D60EB2 = {
 			isa = PBXGroup;
 			children = (
+				637A6F6D1BF55E9000D60EB2 /* MapKit.framework */,
 				637A6F171BF53A3800D60EB2 /* PathwayPrototype */,
 				637A6F2C1BF53A3800D60EB2 /* PathwayPrototypeTests */,
 				637A6F371BF53A3800D60EB2 /* PathwayPrototypeUITests */,
@@ -97,11 +202,11 @@
 		637A6F171BF53A3800D60EB2 /* PathwayPrototype */ = {
 			isa = PBXGroup;
 			children = (
-				637A6F181BF53A3800D60EB2 /* AppDelegate.swift */,
-				637A6F1A1BF53A3800D60EB2 /* ViewController.swift */,
-				637A6F1C1BF53A3800D60EB2 /* Main.storyboard */,
-				637A6F1F1BF53A3800D60EB2 /* Assets.xcassets */,
 				637A6F211BF53A3800D60EB2 /* LaunchScreen.storyboard */,
+				637A6F1C1BF53A3800D60EB2 /* Main.storyboard */,
+				637A6F181BF53A3800D60EB2 /* AppDelegate.swift */,
+				637A6F5B1BF557C400D60EB2 /* ViewControllers */,
+				637A6F5A1BF557BD00D60EB2 /* Supporting Files */,
 				637A6F241BF53A3800D60EB2 /* Info.plist */,
 			);
 			path = PathwayPrototype;
@@ -123,6 +228,66 @@
 				637A6F3A1BF53A3800D60EB2 /* Info.plist */,
 			);
 			path = PathwayPrototypeUITests;
+			sourceTree = "<group>";
+		};
+		637A6F541BF5540400D60EB2 /* PathwayVC */ = {
+			isa = PBXGroup;
+			children = (
+				637A6F551BF5541B00D60EB2 /* PathwayVC.swift */,
+				637A6F6F1BF55F2600D60EB2 /* Cells */,
+				637A6F501BF553F800D60EB2 /* PathwayTopBarView.swift */,
+				637A6F521BF5540100D60EB2 /* PathwayTopBarView.xib */,
+			);
+			name = PathwayVC;
+			sourceTree = "<group>";
+		};
+		637A6F591BF557B400D60EB2 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				637A6F1A1BF53A3800D60EB2 /* ViewController.swift */,
+				637A6F481BF53DA600D60EB2 /* PathwayFeedCell.swift */,
+				637A6F491BF53DA600D60EB2 /* PathwayFeedCell.xib */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		637A6F5A1BF557BD00D60EB2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				637A6F1F1BF53A3800D60EB2 /* Assets.xcassets */,
+				637A6F571BF5579E00D60EB2 /* Extensions.swift */,
+				637A6F461BF53BD000D60EB2 /* Constants.swift */,
+				637A6F4C1BF53ED000D60EB2 /* SF-Display.ttc */,
+				637A6F4E1BF53EDA00D60EB2 /* SF-Text.ttc */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		637A6F5B1BF557C400D60EB2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				637A6F591BF557B400D60EB2 /* Feed */,
+				637A6F541BF5540400D60EB2 /* PathwayVC */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		637A6F6F1BF55F2600D60EB2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				637A6F611BF55B9F00D60EB2 /* PathwayCountTableCell.swift */,
+				637A6F621BF55B9F00D60EB2 /* PathwayCountTableCell.xib */,
+				637A6F701BF571A100D60EB2 /* CountCell.swift */,
+				637A6F711BF571A100D60EB2 /* CountCell.xib */,
+				630831611BF6BADC00303C55 /* PathwayMap */,
+				637A6F691BF55BFF00D60EB2 /* PathwayDescriptionTableCell.swift */,
+				637A6F6A1BF55BFF00D60EB2 /* PathwayDescriptionTableCell.xib */,
+				630831661BF6BB2B00303C55 /* PathwayFootprintCell.swift */,
+				630831671BF6BB2B00303C55 /* PathwayFootprintCell.xib */,
+				6308316A1BF6BBFD00303C55 /* FootprintBottomBarView.swift */,
+				6308316C1BF6BC0F00303C55 /* FootprintBottomBarView.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +358,11 @@
 				TargetAttributes = {
 					637A6F141BF53A3800D60EB2 = {
 						CreatedOnToolsVersion = 7.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					637A6F281BF53A3800D60EB2 = {
 						CreatedOnToolsVersion = 7.1;
@@ -229,9 +399,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630831691BF6BB2B00303C55 /* PathwayFootprintCell.xib in Resources */,
+				630831601BF681B100303C55 /* MapTriangleLabelContainer.xib in Resources */,
+				637A6F4D1BF53ED000D60EB2 /* SF-Display.ttc in Resources */,
+				637A6F641BF55B9F00D60EB2 /* PathwayCountTableCell.xib in Resources */,
+				637A6F4F1BF53EDA00D60EB2 /* SF-Text.ttc in Resources */,
+				637A6F731BF571A100D60EB2 /* CountCell.xib in Resources */,
+				637A6F771BF5763E00D60EB2 /* MapTriangleCell.xib in Resources */,
+				637A6F681BF55BBF00D60EB2 /* PathwayMapTableCell.xib in Resources */,
 				637A6F231BF53A3800D60EB2 /* LaunchScreen.storyboard in Resources */,
+				637A6F6C1BF55BFF00D60EB2 /* PathwayDescriptionTableCell.xib in Resources */,
 				637A6F201BF53A3800D60EB2 /* Assets.xcassets in Resources */,
+				6308316D1BF6BC0F00303C55 /* FootprintBottomBarView.xib in Resources */,
+				637A6F4B1BF53DA600D60EB2 /* PathwayFeedCell.xib in Resources */,
 				637A6F1E1BF53A3800D60EB2 /* Main.storyboard in Resources */,
+				637A6F531BF5540100D60EB2 /* PathwayTopBarView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +439,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				637A6F1B1BF53A3800D60EB2 /* ViewController.swift in Sources */,
+				637A6F561BF5541B00D60EB2 /* PathwayVC.swift in Sources */,
+				630831551BF6556B00303C55 /* TriangleHelper.swift in Sources */,
+				637A6F471BF53BD000D60EB2 /* Constants.swift in Sources */,
+				637A6F721BF571A100D60EB2 /* CountCell.swift in Sources */,
+				637A6F761BF5763E00D60EB2 /* MapTriangleCell.swift in Sources */,
+				637A6F4A1BF53DA600D60EB2 /* PathwayFeedCell.swift in Sources */,
+				637A6F671BF55BBF00D60EB2 /* PathwayMapTableCell.swift in Sources */,
+				630831681BF6BB2B00303C55 /* PathwayFootprintCell.swift in Sources */,
+				637A6F511BF553F800D60EB2 /* PathwayTopBarView.swift in Sources */,
+				630831571BF67C8E00303C55 /* SnapshotHelper.swift in Sources */,
+				637A6F631BF55B9F00D60EB2 /* PathwayCountTableCell.swift in Sources */,
 				637A6F191BF53A3800D60EB2 /* AppDelegate.swift in Sources */,
+				6308316B1BF6BBFD00303C55 /* FootprintBottomBarView.swift in Sources */,
+				637A6F581BF5579E00D60EB2 /* Extensions.swift in Sources */,
+				637A6F6B1BF55BFF00D60EB2 /* PathwayDescriptionTableCell.swift in Sources */,
+				6308315E1BF681A000303C55 /* MapTriangleLabelContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +681,7 @@
 				637A6F3F1BF53A3800D60EB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		637A6F401BF53A3800D60EB2 /* Build configuration list for PBXNativeTarget "PathwayPrototypeTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +690,7 @@
 				637A6F421BF53A3800D60EB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		637A6F431BF53A3800D60EB2 /* Build configuration list for PBXNativeTarget "PathwayPrototypeUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +699,7 @@
 				637A6F451BF53A3800D60EB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

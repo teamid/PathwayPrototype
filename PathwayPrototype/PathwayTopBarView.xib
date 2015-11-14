@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SF-Text.ttc">
+            <string>SFUIText-Regular</string>
+            <string>SFUIText-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PathwayTopBarView" customModule="PathwayPrototype" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="mFj-em-Mc7" id="3y6-Fh-TeF"/>
+                <outlet property="closeIcon" destination="DqL-ry-wnZ" id="Kr7-kZ-ljZ"/>
+                <outlet property="postLabel" destination="H2R-8l-YMx" id="95L-Cf-0Yc"/>
+                <outlet property="timeLabel" destination="OuW-nQ-5n8" id="6LJ-43-f3S"/>
+                <outlet property="view" destination="iN0-l3-epB" id="47C-rh-1RL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="750" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFj-em-Mc7" userLabel="Background">
+                    <rect key="frame" x="0.0" y="0.0" width="750" height="88"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whistler, Canada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuW-nQ-5n8" userLabel="TimeLabel">
+                    <rect key="frame" x="315" y="35" width="120" height="18"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whistler, Canada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2R-8l-YMx" userLabel="PostLabel">
+                    <rect key="frame" x="315" y="35" width="120" height="18"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="15"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="DqL-ry-wnZ">
+                    <rect key="frame" x="15" y="36" width="16" height="16"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="DqL-ry-wnZ" secondAttribute="height" multiplier="1:1" id="QrI-eg-MiC"/>
+                        <constraint firstAttribute="width" constant="16" id="nfZ-Hf-Fad"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="QrI-eg-MiC"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8A-gP-Eee">
+                    <rect key="frame" x="0.0" y="0.0" width="64" height="88"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="WHb-EB-1vh"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="xeR-7H-PDX"/>
+                    </constraints>
+                    <connections>
+                        <action selector="closeTapped:" destination="-1" eventType="touchUpInside" id="glH-tM-2ft"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <constraints>
+                <constraint firstItem="DqL-ry-wnZ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9X0-b2-6aw"/>
+                <constraint firstItem="n8A-gP-Eee" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EG2-wV-mtV"/>
+                <constraint firstItem="mFj-em-Mc7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="InF-RF-yCg"/>
+                <constraint firstAttribute="bottom" secondItem="mFj-em-Mc7" secondAttribute="bottom" id="LKa-Rf-YeF"/>
+                <constraint firstItem="OuW-nQ-5n8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Nf9-UZ-hiO"/>
+                <constraint firstItem="H2R-8l-YMx" firstAttribute="centerY" secondItem="OuW-nQ-5n8" secondAttribute="centerY" id="PYK-Qs-IOO"/>
+                <constraint firstItem="DqL-ry-wnZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="QG3-9B-eCk"/>
+                <constraint firstItem="mFj-em-Mc7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RZr-KL-R7t"/>
+                <constraint firstAttribute="trailing" secondItem="mFj-em-Mc7" secondAttribute="trailing" id="UXv-FN-vjw"/>
+                <constraint firstItem="DqL-ry-wnZ" firstAttribute="width" secondItem="DqL-ry-wnZ" secondAttribute="height" multiplier="1:1" id="Z5v-5u-C1z"/>
+                <constraint firstItem="n8A-gP-Eee" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cSV-xD-BkQ"/>
+                <constraint firstAttribute="bottom" secondItem="n8A-gP-Eee" secondAttribute="bottom" id="ddq-zl-cX7"/>
+                <constraint firstItem="H2R-8l-YMx" firstAttribute="centerX" secondItem="OuW-nQ-5n8" secondAttribute="centerX" id="lgG-eK-d37"/>
+                <constraint firstItem="OuW-nQ-5n8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qiX-iS-Wd9"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Close" width="16" height="16"/>
+    </resources>
+</document>

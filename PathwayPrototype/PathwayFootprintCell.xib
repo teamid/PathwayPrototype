@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PathwayFootprintCell" rowHeight="513" id="KGk-i7-Jjw" customClass="PathwayFootprintCell" customModule="PathwayPrototype" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="513"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="512"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LookingOutTheWindow" translatesAutoresizingMaskIntoConstraints="NO" id="sxH-L7-6Lv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="512"/>
+                        <animations/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayY-SH-5au" customClass="FootprintBottomBarView" customModule="PathwayPrototype" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="461" width="320" height="51"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="51" id="w5p-Fo-ZyC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="ayY-SH-5au" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5DZ-Bn-Ng8"/>
+                    <constraint firstAttribute="trailing" secondItem="ayY-SH-5au" secondAttribute="trailing" id="GBz-pa-ofu"/>
+                    <constraint firstItem="ayY-SH-5au" firstAttribute="bottom" secondItem="sxH-L7-6Lv" secondAttribute="bottom" id="JQx-lc-v7c"/>
+                    <constraint firstItem="sxH-L7-6Lv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LXx-FF-3RF"/>
+                    <constraint firstAttribute="bottom" secondItem="ayY-SH-5au" secondAttribute="bottom" id="Wzf-Y2-egH"/>
+                    <constraint firstAttribute="trailing" secondItem="sxH-L7-6Lv" secondAttribute="trailing" id="Xon-8V-7pB"/>
+                    <constraint firstItem="sxH-L7-6Lv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oJn-k3-6bY"/>
+                    <constraint firstAttribute="bottom" secondItem="sxH-L7-6Lv" secondAttribute="bottom" id="zyh-yk-gs8"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Wzf-Y2-egH"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="barView" destination="ayY-SH-5au" id="j5t-V3-1xC"/>
+                <outlet property="footprintImageView" destination="sxH-L7-6Lv" id="TLJ-Se-MVp"/>
+            </connections>
+            <point key="canvasLocation" x="542" y="390.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="LookingOutTheWindow" width="816" height="1088"/>
+    </resources>
+</document>

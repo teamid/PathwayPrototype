@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SF-Display.ttc">
+            <string>SFUIDisplay-Bold</string>
+        </mutableArray>
+        <mutableArray key="SF-Text.ttc">
+            <string>SFUIText-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapTriangleLabelContainer" customModule="PathwayPrototype" customModuleProvider="target">
+            <connections>
+                <outlet property="subtitleLabel" destination="eBN-FG-H1B" id="YMm-9d-7iv"/>
+                <outlet property="titleLabel" destination="XZA-ZT-USH" id="LaZ-VE-nwG"/>
+                <outlet property="view" destination="iN0-l3-epB" id="D3v-4j-ifP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cvK-qm-4JC" userLabel="Center Container">
+                    <rect key="frame" x="226" y="284" width="149" height="33"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WHISTLER, CANADA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZA-ZT-USH">
+                            <rect key="frame" x="0.0" y="0.0" width="149" height="18"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dec 27, 2014 - Jan 3, 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBN-FG-H1B">
+                            <rect key="frame" x="0.0" y="19" width="149" height="14"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="11"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <animations/>
+                    <constraints>
+                        <constraint firstItem="XZA-ZT-USH" firstAttribute="leading" secondItem="cvK-qm-4JC" secondAttribute="leading" id="0h2-85-Et5"/>
+                        <constraint firstAttribute="trailing" secondItem="eBN-FG-H1B" secondAttribute="trailing" id="5o4-Pc-Ll1"/>
+                        <constraint firstItem="eBN-FG-H1B" firstAttribute="top" secondItem="XZA-ZT-USH" secondAttribute="bottom" constant="1" id="Hn5-vp-rqE"/>
+                        <constraint firstAttribute="trailing" secondItem="XZA-ZT-USH" secondAttribute="trailing" id="VEZ-6c-AyT"/>
+                        <constraint firstItem="XZA-ZT-USH" firstAttribute="top" secondItem="cvK-qm-4JC" secondAttribute="top" id="dRZ-oG-4Bq"/>
+                        <constraint firstAttribute="bottom" secondItem="eBN-FG-H1B" secondAttribute="bottom" id="du2-b2-UpG"/>
+                        <constraint firstItem="eBN-FG-H1B" firstAttribute="leading" secondItem="cvK-qm-4JC" secondAttribute="leading" id="o92-lz-z0l"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <constraints>
+                <constraint firstItem="cvK-qm-4JC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Mwf-7x-5Sg"/>
+                <constraint firstItem="cvK-qm-4JC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Njy-Rz-t03"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

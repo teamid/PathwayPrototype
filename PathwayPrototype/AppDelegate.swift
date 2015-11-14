@@ -41,6 +41,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
       }
 
+      func printFonts() {
+            let fontFamilyNames = UIFont.familyNames()
+            for familyName in fontFamilyNames {
+                  print("------------------------------")
+                  print("Font Family Name = [\(familyName)]")
+                  let names = UIFont.fontNamesForFamilyName(familyName)
+                  print("Font Names = [\(names)]")
+            }
+      }
+      
 
 }
 

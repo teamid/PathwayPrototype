@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SF-Text.ttc">
+            <string>SFUIText-Regular</string>
+            <string>SFUIText-Medium</string>
+            <string>SFUIText-Medium</string>
+            <string>SFUIText-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FootprintBottomBarView" customModule="PathwayPrototype" customModuleProvider="target">
+            <connections>
+                <outlet property="arrow" destination="DqB-yJ-7gt" id="wk6-nE-Ka4"/>
+                <outlet property="avatar" destination="q3N-5l-KAU" id="Pxx-ER-w6M"/>
+                <outlet property="contentContainer" destination="8EF-MT-JtO" id="eV4-dW-Dfo"/>
+                <outlet property="subtitleLabel" destination="ATU-BV-kfr" id="j6C-oh-P2Z"/>
+                <outlet property="titleLabel" destination="Xfb-qn-zDN" id="o9h-ox-nwb"/>
+                <outlet property="venueSubtitleLabel" destination="DCC-RN-nig" id="FDn-wf-qLg"/>
+                <outlet property="venueTitleLabel" destination="zZ7-Fk-Qh1" id="iXr-vl-4DS"/>
+                <outlet property="venueView" destination="rGT-Mi-xBS" id="XX2-SC-Z4R"/>
+                <outlet property="view" destination="iN0-l3-epB" id="P6H-y1-4rX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1211" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FootprintBottomBar" translatesAutoresizingMaskIntoConstraints="NO" id="cMf-o3-idp">
+                    <rect key="frame" x="0.0" y="0.0" width="1211" height="56"/>
+                    <animations/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ArrowIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DqB-yJ-7gt" userLabel="arrow">
+                    <rect key="frame" x="588" y="11" width="34" height="34"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="HOT-AJ-Qs4"/>
+                        <constraint firstAttribute="width" constant="34" id="OLN-Gd-7Zj"/>
+                        <constraint firstAttribute="width" secondItem="DqB-yJ-7gt" secondAttribute="height" multiplier="1:1" id="hUM-AU-MdH"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="OLN-Gd-7Zj"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8EF-MT-JtO" userLabel="PersonView">
+                    <rect key="frame" x="0.0" y="0.0" width="1211" height="56"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POSTED BY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATU-BV-kfr">
+                            <rect key="frame" x="15" y="8" width="62" height="14"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="11"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DavidAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="q3N-5l-KAU">
+                            <rect key="frame" x="15" y="27" width="16" height="16"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="2qA-TR-7pR"/>
+                                <constraint firstAttribute="width" secondItem="q3N-5l-KAU" secondAttribute="height" multiplier="1:1" id="sZ5-FM-afM"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="David Smith" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfb-qn-zDN">
+                            <rect key="frame" x="37" y="26" width="87" height="18"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="15"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rGT-Mi-xBS" userLabel="VenueView">
+                            <rect key="frame" x="1162" y="11" width="34" height="34"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.74901960784313726" green="0.55294117647058827" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="34" id="BIJ-gZ-Dko"/>
+                                <constraint firstAttribute="width" secondItem="rGT-Mi-xBS" secondAttribute="height" multiplier="1:1" id="u17-ad-By5"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WHISTLER MOUNTAIN PEAK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZ7-Fk-Qh1">
+                            <rect key="frame" x="1204" y="11" width="172" height="18"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="15"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Activity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCC-RN-nig">
+                            <rect key="frame" x="1204" y="33" width="34" height="14"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="11"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Th-nh-Itx" userLabel="VenueButton">
+                            <rect key="frame" x="1147" y="0.0" width="64" height="56"/>
+                            <animations/>
+                            <connections>
+                                <action selector="venueButtonTapped:" destination="-1" eventType="touchUpInside" id="8X3-y4-twO"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="rGT-Mi-xBS" firstAttribute="centerY" secondItem="8EF-MT-JtO" secondAttribute="centerY" id="0Sb-jL-ZKV"/>
+                        <constraint firstItem="DCC-RN-nig" firstAttribute="leading" secondItem="zZ7-Fk-Qh1" secondAttribute="leading" id="0Wp-8j-F0R"/>
+                        <constraint firstItem="1Th-nh-Itx" firstAttribute="centerX" secondItem="rGT-Mi-xBS" secondAttribute="centerX" id="15T-aU-N3v"/>
+                        <constraint firstItem="ATU-BV-kfr" firstAttribute="leading" secondItem="q3N-5l-KAU" secondAttribute="leading" id="2KC-LV-8OP"/>
+                        <constraint firstItem="zZ7-Fk-Qh1" firstAttribute="top" secondItem="rGT-Mi-xBS" secondAttribute="top" constant="-1" id="2aU-6A-Ecd"/>
+                        <constraint firstItem="q3N-5l-KAU" firstAttribute="centerY" secondItem="Xfb-qn-zDN" secondAttribute="centerY" id="7dD-jE-kdD"/>
+                        <constraint firstItem="Xfb-qn-zDN" firstAttribute="leading" secondItem="q3N-5l-KAU" secondAttribute="trailing" constant="6" id="CTU-nC-liU"/>
+                        <constraint firstItem="ATU-BV-kfr" firstAttribute="top" secondItem="8EF-MT-JtO" secondAttribute="top" constant="8" id="J0V-P2-dpr"/>
+                        <constraint firstItem="1Th-nh-Itx" firstAttribute="top" secondItem="8EF-MT-JtO" secondAttribute="top" id="VnR-Rh-YGM"/>
+                        <constraint firstItem="1Th-nh-Itx" firstAttribute="width" secondItem="rGT-Mi-xBS" secondAttribute="width" constant="30" id="ZkC-Sr-icw"/>
+                        <constraint firstItem="Xfb-qn-zDN" firstAttribute="top" secondItem="ATU-BV-kfr" secondAttribute="bottom" constant="4" id="dtg-H0-q9a"/>
+                        <constraint firstItem="ATU-BV-kfr" firstAttribute="leading" secondItem="8EF-MT-JtO" secondAttribute="leading" constant="15" id="fz6-II-RWg"/>
+                        <constraint firstItem="DCC-RN-nig" firstAttribute="top" secondItem="zZ7-Fk-Qh1" secondAttribute="bottom" constant="2" id="l3G-Av-Fgz"/>
+                        <constraint firstItem="zZ7-Fk-Qh1" firstAttribute="leading" secondItem="rGT-Mi-xBS" secondAttribute="trailing" constant="8" id="p8o-gn-p5q"/>
+                        <constraint firstAttribute="bottom" secondItem="1Th-nh-Itx" secondAttribute="bottom" id="vRP-Cy-T2e"/>
+                        <constraint firstAttribute="trailing" secondItem="rGT-Mi-xBS" secondAttribute="trailing" constant="15" id="yCQ-zr-Orm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="DqB-yJ-7gt" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="CQb-qy-g8v"/>
+                <constraint firstItem="8EF-MT-JtO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Hor-1e-IIe"/>
+                <constraint firstAttribute="bottom" secondItem="8EF-MT-JtO" secondAttribute="bottom" id="ISp-j7-dv4"/>
+                <constraint firstAttribute="bottom" secondItem="cMf-o3-idp" secondAttribute="bottom" id="NQf-EE-xgQ"/>
+                <constraint firstAttribute="trailing" secondItem="cMf-o3-idp" secondAttribute="trailing" id="aum-Dc-dc0"/>
+                <constraint firstItem="cMf-o3-idp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cv9-pe-1f7"/>
+                <constraint firstItem="cMf-o3-idp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="laY-9I-NN8"/>
+                <constraint firstAttribute="trailing" secondItem="DqB-yJ-7gt" secondAttribute="trailing" constant="15" id="lhp-RM-mmY"/>
+                <constraint firstAttribute="trailing" secondItem="8EF-MT-JtO" secondAttribute="trailing" id="wPd-y4-ulf"/>
+                <constraint firstItem="8EF-MT-JtO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zmF-YU-1uQ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="1146.5" y="153"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ArrowIcon" width="10" height="17"/>
+        <image name="DavidAvatar" width="40" height="40"/>
+        <image name="FootprintBottomBar" width="375" height="54"/>
+    </resources>
+</document>

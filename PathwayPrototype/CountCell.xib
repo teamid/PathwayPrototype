@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SF-Display.ttc">
+            <string>SFUIDisplay-Bold</string>
+        </mutableArray>
+        <mutableArray key="SF-Text.ttc">
+            <string>SFUIText-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CountCell" id="gTV-IL-0wX" customClass="CountCell" customModule="PathwayPrototype" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="94" height="88"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="94" height="88"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36u-5D-0bn" userLabel="Center Container">
+                        <rect key="frame" x="30" y="28" width="35" height="33"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgg-ts-c10">
+                                <rect key="frame" x="0.0" y="0.0" width="35" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CITIES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpZ-fo-VPp">
+                                <rect key="frame" x="0.0" y="19" width="35" height="14"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="11"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cpZ-fo-VPp" secondAttribute="trailing" id="5pA-TS-cpL"/>
+                            <constraint firstItem="cpZ-fo-VPp" firstAttribute="leading" secondItem="36u-5D-0bn" secondAttribute="leading" id="G0u-JX-Zoz"/>
+                            <constraint firstAttribute="bottom" secondItem="cpZ-fo-VPp" secondAttribute="bottom" id="Pnq-JH-62Y"/>
+                            <constraint firstItem="jgg-ts-c10" firstAttribute="top" secondItem="36u-5D-0bn" secondAttribute="top" id="QQU-kD-HQk"/>
+                            <constraint firstAttribute="trailing" secondItem="jgg-ts-c10" secondAttribute="trailing" id="eeD-eO-qmQ"/>
+                            <constraint firstItem="cpZ-fo-VPp" firstAttribute="top" secondItem="jgg-ts-c10" secondAttribute="bottom" constant="1" id="gs9-hr-pYa"/>
+                            <constraint firstItem="jgg-ts-c10" firstAttribute="leading" secondItem="36u-5D-0bn" secondAttribute="leading" id="sJ9-cF-scW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <animations/>
+            <constraints>
+                <constraint firstItem="36u-5D-0bn" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Rf1-ie-1gk"/>
+                <constraint firstItem="36u-5D-0bn" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="bL1-vp-phY"/>
+            </constraints>
+            <size key="customSize" width="405" height="304"/>
+            <connections>
+                <outlet property="countLabel" destination="jgg-ts-c10" id="fg5-Qf-x4O"/>
+                <outlet property="subtitleLabel" destination="cpZ-fo-VPp" id="y5S-pw-Zqb"/>
+            </connections>
+            <point key="canvasLocation" x="705.5" y="373"/>
+        </collectionViewCell>
+    </objects>
+</document>
